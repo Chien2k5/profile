@@ -1,0 +1,528 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+1.Vị trí
+2.Kích thước
+3.Màu sắc
+4.Kiểu dáng
+*/
+
+.clear {
+    clear: both;
+}
+
+
+
+.text-white {
+    color: #fff !important;
+}
+
+#main{
+
+}
+
+#header{
+    position:fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    height:46.5px;
+    background-color: #000;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav,.subnav {
+    list-style-type: none;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav {
+    display: none;
+    min-width: 160.5px;
+    top:100%;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav .subnav a {
+   display: block;        
+    width: 100%;            
+    padding: 0 28px;
+    line-height: 38.5px;       
+    color: #000;
+    text-decoration: none;
+}
+
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46.5px;
+    padding: 0 28px;
+    display: block;
+}
+
+#nav li:hover .subnav { 
+    display:block;
+}
+
+#nav .ti-angle-down {
+    font-size: 12px;
+}
+
+#header .search-btn {
+    float: right;
+    padding: 0 22px;
+}
+
+#header .search-icon {
+    font-size: 20px;
+    color: #fff;
+    line-height: 46.5px;
+}
+#header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+
+#slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;  /* Giữ toàn bộ ảnh, không crop */
+  
+  margin: 36px 0;
+}
+
+#slider .text-content {
+  position: absolute;
+  top: 30px; /* Dời chữ lên trên gần đầu ảnh */
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.8); /* Tạo viền giúp nổi bật trên nền ảnh */
+}
+
+#slider .text-heading {
+  font-weight: 900;
+  font-size: 36px; /* Lớn hơn */
+  margin-top:100px;
+  color: #FFEB3B; /* Màu vàng sáng nổi bật */
+}
+
+#slider .text-decoration {
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+
+
+#content .content-section{
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+
+#content .section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+    font-size: 15px;
+    margin : 15px 0;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .about-text {
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .member-lists {
+    padding-top: 48px;
+}
+
+#content .member-item {
+    float: left;
+    width: calc(100% /3);
+    text-align: center;
+}
+
+#content .member-name {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+#content .member-img {
+    margin-bottom: 16px; width: 154px;
+    border-radius: 4px;
+}
+
+.tour-section {
+    background-color: #000;
+}
+/* Phần ticket */
+.ticket-list {
+    background-color: #fff;
+    margin-top: 39px;
+}
+.ticket-list li {
+   border: 1px solid #ddd;
+    font-size: 15px;
+    padding: 11px 16px;
+    list-style: none;
+    color:#757575;
+}
+.ticket-list .sold-out {
+    color: #fff;
+    background-color:#f44336;
+    margin-left: 16px;
+    padding: 4px 8px;
+
+}
+
+.ticket-list .primary {
+    float: right;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 50%;
+    line-height: 24px;
+    text-align: center;
+    margin-top: -2px;
+}
+/* Phần place */
+.place-list {
+    margin : 32px -8px 0;
+    padding-bottom: 32px;
+
+}
+.place-item {
+    float: left;
+    width: calc(100% / 3);
+    padding : 0 8px;
+    
+}
+.place-img {
+    width: 100%;
+    height: 200px; /* Hoặc chiều cao bạn muốn, ví dụ 250px */
+    object-fit: cover;
+    display: block;
+}
+
+.place-img:hover {
+
+    opacity: 0.7;
+}
+
+.place-body {
+    background-color: #fff;
+    padding: 0.15px 16px;
+}
+.place-heading {
+    font-size: 15px;
+    margin: 15px 0;
+
+}
+.place-time {
+    opacity: 0.5;
+
+}
+.place-desc {
+    margin: 15px 0;
+    line-height: 1.4;
+}
+.place-buy-btn {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 14px;
+    display: inline-block;
+    margin-bottom: 16px;
+
+}
+
+.place-buy-btn:hover {
+    opacity: 0.4;
+}
+
+
+
+#footer{
+
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    
+    align-items: center;
+    justify-content: center;
+    display: none;
+    
+}
+
+.modal-container {
+    background-color: #fff;
+    position: relative;
+    max-width: 900px;
+    width: calc(100% - 32px);
+    min-height: 200px;
+    animation: modalFadeIn 0.7s ease;
+}
+.modal-close {
+    
+    color:#fff;
+    position: absolute;
+    right: 0;
+    padding : 8px 16px;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background-color:red;
+    opacity: 0.8;
+}
+.modal-header {
+    color: #fff;
+    background-color: #009688;
+    max-width: 900px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 4px;
+    font-size: 30px;
+    font-weight: 300px;
+    
+}
+.modal .ti-bag {
+    padding: 0 4px;
+}
+.modal-body {
+    padding: 0 16px;
+    
+}
+.modal-label {
+    display: block;
+    margin : 15px 0;
+}
+.ti-shopping-cart {
+    
+}
+              
+.modal-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 24px;
+    width:100%;
+}
+
+#buy-ticket {
+    color: #fff;
+    background-color: #009688;
+    font-weight: 600px;
+    display: block;
+    width: 100%;
+    margin : 16px 0;
+    padding:16px;
+    cursor: pointer;
+}
+
+#buy-ticket:hover {
+    color: #000;
+    font-weight: 800px;
+    background-color: rgba(75, 75, 75, 0.5);
+}
+
+.modal-footer {
+    padding: 16px;
+    text-align: right;
+    margin-bottom: 16px;
+}
+
+.modal-footer a {
+    color: #2196F3;
+}
+
+.modal.open {
+    display: flex;
+}
+
+
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-40px) scale(0.35);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Contact */
+
+.contact-item {
+    width: 50%;
+    float: left;;
+    padding: 32px 0;
+}
+
+.contact-item p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.contact-item i {
+    width: 30px;
+    font-size: 16px;
+    margin-right: 18px;
+    text-align: center;
+}
+
+.contact-list {
+    display: flex;
+    margin: 0 -8px;
+}
+
+.contact-item {
+    width: 50%;
+    padding: 32px 8px;
+   
+}
+
+/* Ô input chung: Name + Email */
+.name-input {
+    float: left;
+    width: 50%-8px ;
+    padding: 8px;
+    margin-bottom: 8px; /* Cách nhau 16px */
+    
+}
+
+.email-input {
+    float: right;
+    width: 50%-8px ;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+/* Ô Message bên dưới */
+.message-control {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+.mt-send {
+    float: right;
+    background-color: #000;
+    color: #fff;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.mt-send:hover {
+    color: #000;
+    background-color: rgba(75, 75, 75, 0.5);
+
+}
+
+.map-section img {
+    width: 100%;
+}
+
+#footer  {
+    text-align: center;
+    padding: 64px 16px;
+    
+}
+
+.social-list a {
+    color:rgba(75, 75, 75, 0.7);
+    background-color: #f1f1f1;
+    text-decoration: none;
+    padding: 4px;
+    margin: 4px;
+}
+
+.social-list a:hover {
+    opacity: 0.6;
+}
+
+#footer > p {
+    margin: 15px 0;
+    font-size: 15px;
+    
+}
+
+
+#footer > p > a {
+    color: #2196F3;
+
+}
+
+#footer .copy-right a:hover {
+    opacity: 0.5;
+} 
+
+
+}
+
+

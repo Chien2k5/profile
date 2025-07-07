@@ -1,0 +1,63 @@
+@media (max-width: 739px) {
+    #content .content-section {
+        text-align: left;
+        padding-top: 30px;
+        width: 100%;
+    }
+
+    .member-lists {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member-item {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .member-img {
+        width: 90%;
+        height: auto;
+    }
+
+    .place-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .place-item {
+        width: 100%;
+        /* hoặc 100% nếu mobile */
+        background: white;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+    .place-img {
+        width: 100%;
+        height: 250px;
+        /* đặt chiều cao cố định */
+        object-fit: cover;
+        /* giữ tỉ lệ và cắt ảnh thừa */
+    }
+
+    .place-body {
+        padding: 10px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    
+    
+
+
+
+
+}
